@@ -97,3 +97,7 @@ Ensure all resources are deleted:
 ```console
 kubectl get all --all-namespaces | grep argocd
 ```
+
+## Troubleshooting
+
+* In order to run argocd CLI on k3s I had to set `export KUBECONFIG=/etc/rancher/k3s/k3s.yaml`
