@@ -86,6 +86,12 @@ In the machine you will access argocd web server, add the following entry to you
 192.168.1.100 argocd.local
 ```
 Replace 192.168.1.100 with the IP address of your cluster.
+## Access argocd UI
+First get the password 
+```console
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+```
+Then you can access argocd.local address in your browser
 
 ## Clean Up
 Run this command to delete all resources in the argocd namespace:
